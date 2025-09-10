@@ -3,7 +3,8 @@ Loan Defaulter Classification
 📌 Project Overview
 
 This project aims to classify loan defaulters and non-defaulters to support financial institutions in making informed lending decisions.
-The workflow starts from custom data collection using Selenium web scraping, followed by data cleaning, exploratory data analysis (EDA), and machine learning modeling using a Random Forest Classifier.
+The workflow starts from data cleaning, exploratory data analysis (EDA), and machine learning modeling using a Random Forest Classifier.
+Target : 1 as representing a loan that defaulted and 0 as a loan that was successfully approved and repaid.
         
 🧹 Data Cleaning
 
@@ -23,6 +24,10 @@ Performed:
 
     Correlation analysis (heatmaps for numeric features)
 
+    ## Highly correlated features
+   1. AMT_CREDIT and AMT_GOODS_PRICE
+   2. AMT_CREDIT and AMT_ANNUITY
+
 🤖 Model Development
 
     Algorithm Used: Random Forest Classifier inside a preprocessing pipeline.
@@ -41,9 +46,9 @@ Performed:
 
     Precision/Recall/F1:
 
-        Class 0 (Non-defaulters): Excellent performance, recall = 1.00
+        Class 0 (Non-defaulters): recall = 1.00
 
-        Class 1 (Defaulters): Lower recall = 0.30 (model misses some actual defaulters)
+        Class 1 (Defaulters):  recall = 0.30 
 
 Classification Report :
 📌 Key Notes
@@ -66,7 +71,7 @@ Classification Report :
 
     Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 
-    ML Algorithm: Random Forest Classifier
+    ML Algorithm: Random Forest Classifier , XgBoost Classifier
 
 🚀 How to Run
 
